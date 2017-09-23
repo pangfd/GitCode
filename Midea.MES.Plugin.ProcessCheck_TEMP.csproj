@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E10F0137-3897-410F-83CD-348AA2BC9C83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Midea.MES.Plugin.ProcessCheck_TEMP</RootNamespace>
+    <AssemblyName>Midea.MES.Plugin.ProcessCheck_TEMP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\Client\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Release Assemblies\Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\..\Reference Assemblies\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Midea.Core">
+      <HintPath>..\..\..\Release Assemblies\Midea.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Midea.Data.Common, Version=2015.8.24.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Release Assemblies\Midea.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Midea.MES.Platform.Common, Version=2015.8.24.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Release Assemblies\Midea.MES.Platform.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Midea.MES.Platform.Model, Version=2015.8.24.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Release Assemblies\Midea.MES.Platform.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\MideaProduct\MESPlatform\Lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\FrameWork.cs" />
+    <Compile Include="Controls\UniformList.xaml.cs">
+      <DependentUpon>UniformList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Convertors\ItemCountToItemSizeConverter.cs" />
+    <Compile Include="Convertors\MessageTypeToColorConverter.cs" />
+    <Compile Include="Convertors\ValueGreaterThanConverter.cs" />
+    <Compile Include="Models\DefectModel.cs" />
+    <Compile Include="Models\DefectsModel.cs" />
+    <Compile Include="Models\Direction.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\ScanDetailModel.cs" />
+    <Compile Include="Models\DefectStatModel.cs" />
+    <Compile Include="ViewModels\PqcDefectInputVM.cs" />
+    <Compile Include="ViewModels\PQCHistoryVM.cs" />
+    <Compile Include="ViewModels\PQCMainNewVM.cs" />
+    <Compile Include="ViewModels\PQCMainVM.cs" />
+    <Compile Include="ViewModels\PQCNGInputVM.cs" />
+    <Compile Include="Views\FailDetail.xaml.cs">
+      <DependentUpon>FailDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PqcDefectInput.xaml.cs">
+      <DependentUpon>PqcDefectInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PQCMainNew.xaml.cs">
+      <DependentUpon>PQCMainNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PQCNGInput.xaml.cs">
+      <DependentUpon>PQCNGInput.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\PqcMain.xaml.cs">
+      <DependentUpon>PqcMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScanDetail.xaml.cs">
+      <DependentUpon>ScanDetail.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\UniformList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FailDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PqcDefectInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PQCMainNew.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PQCNGInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PqcMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ScanDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\05 Shared\Midea.MES.AutoScanner.UDP\Midea.MES.AutoScanner.UDP.csproj">
+      <Project>{71429bcb-eb9e-42f8-948d-fb948a9f9989}</Project>
+      <Name>Midea.MES.AutoScanner.UDP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\99 Tools\Midea.MES.AutoSacnner.Interface\Midea.MES.AutoSacnner.Interface.csproj">
+      <Project>{a89de46e-cb64-4d14-bee3-41e227ee0bd5}</Project>
+      <Name>Midea.MES.AutoSacnner.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\99 Tools\Midea.MES.AutoScanner.Business\Midea.MES.AutoScanner.Business.csproj">
+      <Project>{1065d85c-a678-4862-9d59-371558d2379b}</Project>
+      <Name>Midea.MES.AutoScanner.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\05 Shared\Midea.MES.Biz.Model\Midea.MES.Biz.Model.csproj">
+      <Project>{6daf5470-ea28-4b54-9dc6-12a7be1166b9}</Project>
+      <Name>Midea.MES.Biz.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\05 Shared\Midea.MES.Client.Common\Midea.MES.Client.Common.csproj">
+      <Project>{73aa171a-6f4c-4626-9d31-c7b575034d4c}</Project>
+      <Name>Midea.MES.Client.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
